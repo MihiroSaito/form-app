@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <div class="header"><h1>ToDoアプリ</h1></div>
+  <div class="main">
+  <%= form_with(model: @post, local: true) do |f|%>
+    <%= f.text_field :text, class: 'form__text-field js-form__text-field' %>
+    <%= f.submit "send", class: 'form__submit js-submit' %>
+  <% end %>
+  <% @posts.each do |post|%>
+    <%= post.text%>
+  <% end %>
+  </div>
+  <div class="footer"></div>
+</div>
